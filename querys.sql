@@ -8,6 +8,6 @@ PRIMARY KEY (`id`)
 
 INSERT INTO `tb_personal` (`id`, `title`, `status`, `description`)
 VALUES
-(NULL, 'Lorem Ipsum', '0', '\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"');
+(NULL, 'Lorem Ipsum', '0', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...');
 
 SELECT * FROM `tb_personal`
