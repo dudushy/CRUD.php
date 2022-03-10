@@ -13,6 +13,6 @@ class Personal extends BaseController
                 'personal' => $model -> findAll(),
                 'document_code' => 'document_code',
         ];
-        return view('dashboard', $data);
+        return view('dasbord', $data);
     }
 }
