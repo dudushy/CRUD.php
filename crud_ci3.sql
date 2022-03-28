@@ -37,8 +37,8 @@ CREATE TABLE `tb_profile` (
 --
 
 INSERT INTO `tb_profile` (`prf_id`, `prf_name`) VALUES
-(1, 'Administrador'),
-(2, 'Vendedor');
+(1, 'Administrator'),
+(2, 'Seller');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ ALTER TABLE `tb_profile`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`usr_id`),
-  ADD KEY `fk_user_profile_idx` (`prf_id`) USING BTREE;
+  ADD KEY `fk_tb_user_tb_profile_idx` (`prf_id`) USING BTREE;
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -96,7 +96,7 @@ ALTER TABLE `tb_user`
 -- Constraints for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  ADD CONSTRAINT `fk_usuario_perfil` FOREIGN KEY (`prf_id`) REFERENCES `tb_profile` (`prf_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_tb_user_tb_profile` FOREIGN KEY (`prf_id`) REFERENCES `tb_profile` (`prf_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
