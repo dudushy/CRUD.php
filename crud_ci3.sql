@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `crud_ci3`
 --
+CREATE SCHEMA IF NOT EXISTS `crud_ci3` DEFAULT CHARACTER SET utf8 ;
+USE `crud_ci3` ;
 
 -- --------------------------------------------------------
 
