@@ -23,4 +23,9 @@ class Model_User extends CI_Model {
         
         $this->db->insert('tb_user', $arrayData);
     }
+    
+    public function readUser() {
+        $query = $this->db->query("SELECT * FROM tb_user u INNER JOIN tb_profile p ON u.prf_id = p.prf_id");
+        return $query->result();
+    }
 }

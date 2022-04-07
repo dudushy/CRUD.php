@@ -10,6 +10,7 @@ class User extends CI_Controller {
     public function index(){
         $data['content'] = 'user/index';
         $data['readProfile'] = $this->Model_User->readProfile();
+        $data['readUser'] = $this->Model_User->readUser();
         $this->load->view('model', $data);
     }
     
