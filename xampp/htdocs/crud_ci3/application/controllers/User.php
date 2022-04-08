@@ -34,4 +34,30 @@ class User extends CI_Controller {
            redirect('');
         }
     }
+    
+    public function edit($id = NULL) {
+        if ($id != NULL) {
+            $data['content'] = 'user/edit';
+            $data['readProfile'] = $this->Model_User->readProfile();
+            $data['dataUser'] = $this->Model_User->readUserById($id);
+            $this->load->view('model', $data);
+        } else {
+            redirect('');
+        }
+    }
+    
+    public function update() {
+        $data = $this->input->post();
+        
+        if (isset($data)){
+            $txtUserId = $data['txtUserId'];
+            $txtProfileId = $data['txtProfileId'];
+            $txtUserName = $data['txtUserName'];
+            $txtUserNickname = $data['txtUserNickname'];
+            $txtUserEmail = $data['txtUserEmail'];
+            $txtUserTelephone = $data['txtUserTelephone'];
+            $this->Model_User->updateUser($txtUserId, $txtProfileId, $txtUserName, $txtUserNickname, $txtUserEmail, $txtUserTelephone);
+            redirect('');
+        }
+    }
 }
