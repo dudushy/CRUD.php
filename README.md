@@ -9,7 +9,7 @@ Create Read Update Delete
 - [x] ~[Part 4](https://youtu.be/q4_dsWzJBis)~
 - [x] ~[Part 5](https://youtu.be/PfJ54-6G7c0)~
 - [x] ~[Part 6](https://youtu.be/sJtHWSGqKAM)~
-- [ ] [Part 7](https://youtu.be/xrWj0CRWTWk)
+- [x] ~[Part 7](https://youtu.be/xrWj0CRWTWk)~
 
 ---
 #### Credits

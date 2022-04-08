@@ -1,5 +1,3 @@
-<h1>CRUD.php</h1>
-
 <div>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
@@ -16,7 +14,7 @@
                     <form method="POST" action="<?php echo base_url('user/create'); ?>">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
-                                Profile
+                                <b>Profile</b>
                             </label>
                             <select name="prf_id" class="form-control">
                                 <?php foreach ($readProfile as $value) { ?>
@@ -27,25 +25,25 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
-                                Name
+                                <b>Name</b>
                             </label>
                             <input type="text" name="usr_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
-                                Nickname
+                                <b>Nickname</b>
                             </label>
                             <input type="text" name="usr_nickname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nickname">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
-                                Email
+                                <b>Email</b>
                             </label>
                             <input type="email" name="usr_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">
-                               Telephone
+                               <b>Telephone</b>
                             </label>
                             <input type="text" name="usr_telephone" class="form-control" id="exampleInputPassword1" placeholder="Telephone">
                         </div>
