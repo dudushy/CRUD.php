@@ -28,4 +28,9 @@ class Model_User extends CI_Model {
         $query = $this->db->query("SELECT * FROM tb_user u INNER JOIN tb_profile p ON u.prf_id = p.prf_id");
         return $query->result();
     }
+    
+    public function deleteUser($id) {
+        $this->db->where('usr_id', $id);
+        $this->db->delete('tb_user');
+    }
 }

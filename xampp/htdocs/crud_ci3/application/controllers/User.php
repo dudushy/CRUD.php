@@ -27,4 +27,11 @@ class User extends CI_Controller {
             redirect('');
         }
     }
+    
+    public function delete($id = NULL) {
+        if ($id != NULL) {
+           $this->Model_User->deleteUser($id);
+           redirect('');
+        }
+    }
 }
