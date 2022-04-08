@@ -18,7 +18,7 @@
                             <label for="exampleInputEmail1" class="form-label">
                                 Profile
                             </label>
-                            <select name="txtProfileId" class="form-control">
+                            <select name="prf_id" class="form-control">
                                 <?php foreach ($readProfile as $value) { ?>
                                     <option value="<?php echo $value->prf_id ?>"><?php echo $value->prf_name; ?></option>
                                 <?php }; ?>
@@ -29,25 +29,25 @@
                             <label for="exampleInputEmail1" class="form-label">
                                 Name
                             </label>
-                            <input type="text" name="txtUserName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+                            <input type="text" name="usr_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
                                 Nickname
                             </label>
-                            <input type="text" name="txtUserNickname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nickname">
+                            <input type="text" name="usr_nickname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nickname">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">
                                 Email
                             </label>
-                            <input type="email" name="txtUserEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                            <input type="email" name="usr_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">
                                Telephone
                             </label>
-                            <input type="text" name="txtUserTelephone" class="form-control" id="exampleInputPassword1" placeholder="Telephone">
+                            <input type="text" name="usr_telephone" class="form-control" id="exampleInputPassword1" placeholder="Telephone">
                         </div>
                         <button type="submit" class="btn btn-primary">
                             Create User

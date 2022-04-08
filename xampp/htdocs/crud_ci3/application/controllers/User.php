@@ -18,28 +18,28 @@ class User extends CI_Controller {
         $data = $this->input->post();
         
         if (isset($data)){
-            $txtId = $data['txtId'];
-            $txtName = $data['txtName'];
-            $txtNickname = $data['txtNickname'];
-            $txtEmail = $data['txtEmail'];
-            $txtTelephone = $data['txtTelephone'];
-            $this->Model_User->createUser($txtId, $txtName, $txtNickname, $txtEmail, $txtTelephone);
+            $prf_id = $data['prf_id'];
+            $usr_name = $data['usr_name'];
+            $usr_nickname = $data['usr_nickname'];
+            $usr_email = $data['usr_email'];
+            $usr_telephone = $data['usr_telephone'];
+            $this->Model_User->createUser($prf_id, $usr_name, $usr_nickname, $usr_email, $usr_telephone);
             redirect('');
         }
     }
     
-    public function delete($id = NULL) {
-        if ($id != NULL) {
-           $this->Model_User->deleteUser($id);
+    public function delete($usr_id = NULL) {
+        if ($usr_id != NULL) {
+           $this->Model_User->deleteUser($usr_id);
            redirect('');
         }
     }
     
-    public function edit($id = NULL) {
-        if ($id != NULL) {
+    public function edit($usr_id = NULL) {
+        if ($usr_id != NULL) {
             $data['content'] = 'user/edit';
             $data['readProfile'] = $this->Model_User->readProfile();
-            $data['dataUser'] = $this->Model_User->readUserById($id);
+            $data['dataUser'] = $this->Model_User->readUserById($usr_id);
             $this->load->view('model', $data);
         } else {
             redirect('');
@@ -50,13 +50,13 @@ class User extends CI_Controller {
         $data = $this->input->post();
         
         if (isset($data)){
-            $txtUserId = $data['txtUserId'];
-            $txtProfileId = $data['txtProfileId'];
-            $txtUserName = $data['txtUserName'];
-            $txtUserNickname = $data['txtUserNickname'];
-            $txtUserEmail = $data['txtUserEmail'];
-            $txtUserTelephone = $data['txtUserTelephone'];
-            $this->Model_User->updateUser($txtUserId, $txtProfileId, $txtUserName, $txtUserNickname, $txtUserEmail, $txtUserTelephone);
+            $usr_id = $data['usr_id'];
+            $prf_id = $data['prf_id'];
+            $usr_name = $data['usr_name'];
+            $usr_nickname = $data['usr_nickname'];
+            $usr_email = $data['usr_email'];
+            $usr_telephone = $data['usr_telephone'];
+            $this->Model_User->updateUser($usr_id, $prf_id, $usr_name, $usr_nickname, $usr_email, $usr_telephone);
             redirect('');
         }
     }

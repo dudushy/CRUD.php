@@ -12,13 +12,13 @@ class Model_User extends CI_Model {
         return $query->result();
     }
     
-    public function createUser($profileId, $userName, $userNickname, $userEmail, $userTelephone){
+    public function createUser($prf_id, $usr_name, $usr_nickname, $usr_email, $usr_telephone){
         $arrayData = array(
-            'prf_id' => $profileId,
-            'usr_name' => $userName,
-            'usr_nickname' => $userNickname,
-            'usr_email' => $userEmail,
-            'usr_telephone' => $userTelephone
+            'prf_id' => $prf_id,
+            'usr_name' => $usr_name,
+            'usr_nickname' => $usr_nickname,
+            'usr_email' => $usr_email,
+            'usr_telephone' => $usr_telephone
         );
         
         $this->db->insert('tb_user', $arrayData);
@@ -29,26 +29,26 @@ class Model_User extends CI_Model {
         return $query->result();
     }
     
-    public function deleteUser($id) {
-        $this->db->where('usr_id', $id);
+    public function deleteUser($usr_id) {
+        $this->db->where('usr_id', $usr_id);
         $this->db->delete('tb_user');
     }
     
-    public function readUserById($id) {
-        $query = $this->db->query("SELECT * FROM tb_user u INNER JOIN tb_profile p ON u.prf_id = p.prf_id WHERE u.usr_id = $id");
+    public function readUserById($usr_id) {
+        $query = $this->db->query("SELECT * FROM tb_user u INNER JOIN tb_profile p ON u.prf_id = p.prf_id WHERE u.usr_id = $usr_id");
         return $query->result();
     }
     
-    public function updateUser($txtUserId, $txtProfileId, $txtUserName, $txtUserNickname, $txtUserEmail, $txtUserTelephone) {
+    public function updateUser($usr_id, $prf_id, $usr_name, $usr_nickname, $usr_email, $usr_telephone) {
         $array = array(
-            'usr_id' => $txtUserId,
-            'prf_id' => $txtProfileId,
-            'usr_name' => $txtUserName,
-            'usr_nickname' => $txtUserNickname,
-            'usr_email' => $txtUserEmail,
-            'usr_telephone' => $txtUserTelephone
+            'usr_id' => $usr_id,
+            'prf_id' => $prf_id,
+            'usr_name' => $usr_name,
+            'usr_nickname' => $usr_nickname,
+            'usr_email' => $usr_email,
+            'usr_telephone' => $usr_telephone
         );
-        $this->db->where('usr_id', $txtUserId);
+        $this->db->where('usr_id', $usr_id);
         $this->db->update('tb_user', $array);
     }
 }
